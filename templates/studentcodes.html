@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Student Codes</title>
+ 
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ 
+ </head>
+ <body>
+   <div class="container" style="padding-top:8%;">
+     <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">FIle_name</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                {%for i in range(0,n)%}
+              <tr>
+                  
+               <td> {{i.file_name}}</td>
+                <td>{{i.file_path}}</td>
+                <td>
+                    <div class="dropdown">
+                        <button  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Send to
+                        </button >
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for j in range(0,T) %}
+                          <button type="submit"><a href="/user/Student/home">{{j.Teacher_name}}</a></button>
+                          {% endfor %}
+                          <!-- <button><a class="dropdown-item" href="#">Another action</a></button> -->
+                          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                        </div>
+                      </div>
+                </td>
+                
+              </tr>
+              {% endfor %}
+              
+            </tbody>
+          </table>
+     </div>
+   </div>
+
+  <script type="text/javascript">
+   {% with messages = get_flashed_messages() %}
+ {% if messages %}
+   {% for message in messages %}
+     swal('{{message}}');
+   {% endfor %}
+ {% endif %}
+{% endwith %}
+</script>          
+</body>
+</html>

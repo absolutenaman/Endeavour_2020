@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/studentdash.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300|Quicksand" rel="stylesheet">
+    <title></title>
+
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #111;
+      }
+      </style>  
+</head>
+
+<body>
+
+<ul>
+  <li><div class="logo">Online Lab</div></li>
+  <li><a href="/user/Student/student_dashboard">Profile</a></li>
+  <li><a href="/logout">Log Out</a></li>
+</ul>
+
+<!-- <div class="btns">
+<button class="invite_btn">Invite</button>
+<button class="create_lab_btn">Create New Lab</button>
+</div> -->
+<br/><br/><br/>
+<div class="boxes">
+	<div class="exp_box">
+		<div class="exp_head"> &nbsp; Exp 1: &nbsp; Create a program to print hello world!!!</div>
+	</div>
+		<a href="/user/Student/run-page " class="solve_btn" style="z-index:100000000;margin-top:40px">Solve</a>
+</div>
+
+
+</body>
+</html>

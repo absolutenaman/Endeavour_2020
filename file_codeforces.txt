@@ -1,0 +1,6 @@
+Newbie 
+1040
+ (max. pupil,  1372)
+pupil, 
+1372
+contribution=0

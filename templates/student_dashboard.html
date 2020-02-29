@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>student dashboard</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Spartan|Ubuntu&display=swap" rel="stylesheet">
+	<style>
+		.container-fluid1 {
+			margin-top: 50px;
+			color: #142850;
+			font-size: 50px;
+			padding-left: 35px;
+			font-family: ubuntu;
+		}
+
+		.card1 {
+			padding: 20px;
+		}
+
+		.main-column {
+			color: #27496d;
+			background-color: #ffffff;
+			font-family: ubuntu;
+			border-radius: 20px;
+			box-shadow: 0px 0px 10px 5px rgba(31, 224, 31, 1);
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align: center;
+
+		}
+
+		.sidebar-one {
+			color: #27496d;
+			background-color: #ffffff;
+			font-family: ubuntu;
+			border-radius: 20px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			box-shadow: 0px 0px 10px 5px rgba(31, 224, 144, 1);
+			text-align: center;
+		}
+
+		.sidebar-two {
+			color: #27496d;
+			background-color: #ffffff;
+			font-family: ubuntu;
+			border-radius: 20px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			box-shadow: 0px 0px 10px 5px rgba(29, 191, 215, 1);
+			text-align: center;
+
+		}
+		.text{
+			padding-top: 30px;
+			padding-bottom: 10px;
+		}
+	</style>
+
+<body style="background-color: #f9f7f7;">
+
+	<section>
+		<div id="">
+			<div class="container-fluid1">
+				<p style="margin-bottom:20px;">Student Dashboard</h2>
+				<h2 style="margin-bottom:20px;">students can view their report and all the information at one place</p>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-4 col-md-6">
+					<div class="card1">
+						<div class="main-column">
+							<h1>Hackerrank</h1>
+							<img src="../static/images/hackerrank.jfif"><br>
+							<div class="text">
+								<h2>Aditi Varshney
+							</div>
+							<div>
+								<p>atempted challenges</p>
+								<ul id="listWithHandle">
+									{% for list in list1 %}
+									<li>{{ list }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<h2>respective ranks</h2>
+							<div>{{hackerrank_discription}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="card1">
+						<div class="sidebar-one">
+							<h1>Hackerearth</h1>
+							<img src="../static/images/hackerearth.png"><br>
+							<div class="text">
+								<h2>Aditi Varshney
+							</div>
+							<div>
+								<h3>@aditi_1721it1011
+							</div>
+							<div>
+								<h3>user rank</h3>
+								<h4>{{hackerearth}}</h4>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="card1">
+						<div class="sidebar-two  container-fluid">
+							<h1>Codeforces</h1>
+							<img src="../static/images/codeforces.jfif"><br>
+							<div class="text">
+								<h2>Aditi Varshney
+							</div>
+							<div>
+								<p>status is {{status}}</p>
+
+							</div>
+							<div>
+								<p>current rank and max rank</p>
+								<ul id="listWithHandle">
+									{% for list2 in list2 %}
+									<li>{{ list2 }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	</div>
+
+	<!-- bootstrap script here  -->
+	<!-- rupam was here -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+		integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
+	</script>
+</body>
